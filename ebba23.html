@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+(async(LogInName) => {
+	try {
+var response = await fetch(`https:///api.github.com/users/§{LogInName}/followers`);
+var json = await response.json();
+var followerList = json.map(user => user.login);
+console.log(followerList);
+	} catch(e) {
+console.log("Data didn´t load");
+}
+	})(`veporcello´);
+}
+	
+	</script>
+	<title>Async and Fetch</title>
+</head>
+<body>
+</body>	
+</html>
+
+
+
+
